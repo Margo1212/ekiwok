@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:github-action": "eslint src"
+    "lint": "eslint pages --fix",
+    "lint:github-action": "eslint pages"
   },
   "dependencies": {
     "axios": "^0.27.2",
