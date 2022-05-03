@@ -1,34 +1,35 @@
 {
   "name": "client",
+  "version": "0.1.0",
   "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "lint": "eslint src --fix",
-    "lint:github-action": "eslint src"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint pages --fix",
+    "lint:github-action": "eslint pages"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
+    "@types/node": "17.0.31",
+    "@types/react": "18.0.8",
+    "@types/react-dom": "18.0.3",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
-    "eslint": "^8.12.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "jest": "^27.5.1",
     "prettier": "^2.6.2",
-    "typescript": "^4.6.3"
+    "eslint": "8.14.0",
+    "eslint-config-next": "12.1.6",
+    "typescript": "4.6.4"
   }
 }
