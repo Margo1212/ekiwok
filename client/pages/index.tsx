@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Logo } from '../components/Logo/logo'
 
+import { Logo } from '../components/Logo/logo'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
