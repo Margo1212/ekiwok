@@ -17,10 +17,10 @@ export const Logo = () => {
       <path d="M328.018 36.543C327.699 36.3059 327.297 36.2033 326.901 36.2576C326.505 36.312 326.147 36.5189 325.906 36.8329C325.512 37.343 325.5 38.0445 325.871 38.572C326.536 39.0648 327.477 38.9373 327.983 38.2822C328.371 37.772 328.383 37.0706 328.018 36.543Z" fill="#896024" />
       <path d="M345.605 39.9983C343.398 39.9983 341.392 41.836 341.392 44.8853C341.392 47.9347 343.398 49.7666 345.605 49.7666C347.817 49.7666 349.818 47.9289 349.818 44.8853C349.818 41.8418 347.841 39.9983 345.605 39.9983Z" fill="#422B0D" />
       <path d="M345.422 42.0389C344.675 41.6853 343.775 41.9983 343.41 42.7346C343.128 43.3143 343.257 44.0042 343.722 44.4447C344.469 44.7984 345.369 44.4853 345.734 43.7491C346.017 43.1752 345.893 42.4853 345.422 42.0389Z" fill="#896024" />
-      <path d="M337.173 62.706C331.36 61.7668 327.23 58.1493 325.206 54.671C325 54.3232 325.012 53.8942 325.235 53.558C325.459 53.2159 325.853 53.0304 326.23 53.0884C326.4 53.1174 326.565 53.1927 326.706 53.3087C329.06 55.3029 333.125 57.958 337.821 58.7175L338.274 58.7523C343.416 59.2276 346.205 57.703 348.864 56.6189C349.035 56.5493 349.965 56.2479 350.294 57.158C350.43 57.5348 350.124 58.0798 349.847 58.3754C347.699 60.6943 343.916 63.3089 337.485 62.7349L337.173 62.706Z" fill="#422B0D" stroke="#422B0D" stroke-width="1.17287" stroke-miterlimit="10" />
+      <path d="M337.173 62.706C331.36 61.7668 327.23 58.1493 325.206 54.671C325 54.3232 325.012 53.8942 325.235 53.558C325.459 53.2159 325.853 53.0304 326.23 53.0884C326.4 53.1174 326.565 53.1927 326.706 53.3087C329.06 55.3029 333.125 57.958 337.821 58.7175L338.274 58.7523C343.416 59.2276 346.205 57.703 348.864 56.6189C349.035 56.5493 349.965 56.2479 350.294 57.158C350.43 57.5348 350.124 58.0798 349.847 58.3754C347.699 60.6943 343.916 63.3089 337.485 62.7349L337.173 62.706Z" fill="#422B0D" stroke="#422B0D" strokeWidth="1.17287" strokeMiterlimit="10" />
       <defs>
-        <filter id="filter0_d_26_3" x="2.78021" y="11.2344" width="286.088" height="68.0033" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <filter id="filter0_d_26_3" x="2.78021" y="11.2344" width="286.088" height="68.0033" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
           <feOffset dx="2.80264" dy="2.80264" />
           <feComposite in2="hardAlpha" operator="out" />
@@ -29,38 +29,38 @@ export const Logo = () => {
           <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_26_3" result="shape" />
         </filter>
         <radialGradient id="paint0_radial_26_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(337.656 52.2239) scale(30.4107 29.9635)">
-          <stop offset="0.5" stop-color="#FDE030" />
-          <stop offset="0.919" stop-color="#F7C02B" />
-          <stop offset="1" stop-color="#F4A223" />
+          <stop offset="0.5" stopColor="#FDE030" />
+          <stop offset="0.919" stopColor="#F7C02B" />
+          <stop offset="1" stopColor="#F4A223" />
         </radialGradient>
         <radialGradient id="paint1_radial_26_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(338.126 53.1795) rotate(10.0594) scale(31.8125 30.086)">
-          <stop offset="0.5" stop-color="#FDE030" />
-          <stop offset="0.919" stop-color="#F7C02B" />
-          <stop offset="1" stop-color="#F4A223" />
+          <stop offset="0.5" stopColor="#FDE030" />
+          <stop offset="0.919" stopColor="#F7C02B" />
+          <stop offset="1" stopColor="#F4A223" />
         </radialGradient>
         <radialGradient id="paint2_radial_26_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(351.566 75.5478) rotate(0.386737) scale(3.96886 3.36958)">
-          <stop stop-color="#F7C02B" />
-          <stop offset="0.752" stop-color="#F7C02B" stop-opacity="0" />
+          <stop stopColor="#F7C02B" />
+          <stop offset="0.752" stopColor="#F7C02B" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="paint3_radial_26_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(312.78 66.6128) rotate(0.587328) scale(2.96489 3.82321)">
-          <stop stop-color="#F7C02B" />
-          <stop offset="0.752" stop-color="#F7C02B" stop-opacity="0" />
+          <stop stopColor="#F7C02B" />
+          <stop offset="0.752" stopColor="#F7C02B" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="paint4_radial_26_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(317.919 72.8318) rotate(11.6145) scale(2.79946 7.05409)">
-          <stop stop-color="#F7C02B" stop-opacity="0.971" />
-          <stop offset="0.928" stop-color="#F7C02B" stop-opacity="0" />
+          <stop stopColor="#F7C02B" stopOpacity="0.971" />
+          <stop offset="0.928" stopColor="#F7C02B" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="paint5_radial_26_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(335.58 82.862) rotate(0.812953) scale(3.09308 7.78438)">
-          <stop offset="0.307" stop-color="#F7C02B" stop-opacity="0.971" />
-          <stop offset="1" stop-color="#F7C02B" stop-opacity="0" />
+          <stop offset="0.307" stopColor="#F7C02B" stopOpacity="0.971" />
+          <stop offset="1" stopColor="#F7C02B" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="paint6_radial_26_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(345.166 80.1769) scale(3.89327 7.76985)">
-          <stop offset="0.074" stop-color="#F7C02B" />
-          <stop offset="0.787" stop-color="#F7C02B" stop-opacity="0" />
+          <stop offset="0.074" stopColor="#F7C02B" />
+          <stop offset="0.787" stopColor="#F7C02B" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="paint7_radial_26_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(360.449 71.4039) rotate(12.1577) scale(3.22149 8.00362)">
-          <stop stop-color="#F7C02B" />
-          <stop offset="0.752" stop-color="#F7C02B" stop-opacity="0" />
+          <stop stopColor="#F7C02B" />
+          <stop offset="0.752" stopColor="#F7C02B" stopOpacity="0" />
         </radialGradient>
       </defs>
     </svg>
