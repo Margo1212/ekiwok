@@ -1,46 +1,40 @@
 {
   "env": {
-      "browser": true,
-      "es2021": true
+    "browser": true,
+    "es2021": true
   },
   "extends": [
-      "next/core-web-vitals",
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:react-hooks/recommended",
-      "plugin:@typescript-eslint/recommended"
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-      "ecmaFeatures": {
-          "jsx": true
-      },
-      "ecmaVersion": "latest",
-      "sourceType": "module"
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
-  "plugins": [
-      "react",
-      "react-hooks",
-      "import",
-      "simple-import-sort",
-      "@typescript-eslint"
-  ],
+  "plugins": ["react", "react-hooks", "import", "simple-import-sort", "@typescript-eslint"],
   "settings": {
-      "react": {
-          "version": "detect"
-      }
+    "react": {
+      "version": "detect"
+    }
   },
   "rules": {
-      "simple-import-sort/imports": "error",
-      "simple-import-sort/exports": "error",
-      "import/first": "error",
-      "import/newline-after-import": "error",
-      "import/no-duplicates": "error",
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-shadow": "off",
-      "@typescript-eslint/comma-dangle": "off",
-      "@typescript-eslint/indent": "off",
-      "react/react-in-jsx-scope": "off",
-      "no-console": "warn"
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/indent": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-console": "warn"
   }
 }
