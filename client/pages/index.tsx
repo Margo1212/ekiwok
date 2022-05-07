@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import { Input } from '../components/Input/Input';
-import styles from '../styles/Home.module.css';
 import { Logo } from '../components/Logo/logo';
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/noto_melting-facefavicon-emoji.png" />
       </Head>
       <Input sizeOfInput="md" placeholder="USER12345" iconPosition="left" />
-      <Input sizeOfInput="sm" iconPosition="right" />   
+      <Input sizeOfInput="sm" iconPosition="right" />
       <Logo />
     </div>
   );
