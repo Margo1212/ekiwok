@@ -6,7 +6,7 @@ type InputProps = {
   sizeOfInput?: 'md' | 'sm';
 } & InputHTMLAttributes<HTMLInputElement>;
 
-export const Input = ({ placeholder, icon, iconPosition, sizeOfInput }: InputProps) => {
+export const Input = ({ placeholder, icon, iconPosition, sizeOfInput, ...props }: InputProps) => {
   const [value, setValue] = useState('');
 
   const size = sizeOfInput === 'sm' ? 'py-1' : 'py-3';
@@ -26,6 +26,7 @@ export const Input = ({ placeholder, icon, iconPosition, sizeOfInput }: InputPro
         placeholder={placeholder}
         value={value}
         onChange={(e) => setValue(e.target.value)}
+        {...props}
       />
     </div>
   );
