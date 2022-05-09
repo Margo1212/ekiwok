@@ -2,8 +2,8 @@ import { Share1Icon } from '@radix-ui/react-icons'
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import { Button } from '../components/Logo/Button/Button';
 import { Input } from '../components/Input/Input';
+import { Button } from '../components/Logo/Button/Button';
 import { Logo } from '../components/Logo/logo';
 import styles from '../styles/Home.module.css';
 
