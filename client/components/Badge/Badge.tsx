@@ -34,12 +34,7 @@ const Badge = ({ count, size = 'lg', variant = 'outlined' }: BadgeProps) => {
         `}
       >
         <p className={`font-semibold text-${sizes[size].txtSize} text-${variants[variant].color}`}>{count}</p>
-        {/* <p className="text-5xl text-primary font-normal"></p> */}
-        {/* <p className="text-xl text-dark font-normal"></p> */}
       </div>
-      {/* <div className={`m-2 border-4 rounded-full border-primary w-24 h-24 bg-dark`}></div> */}
-      {/* <div className={`border-4 rounded-full border-dark w-24 h-24 bg-primary`}></div> */}
-      {/* <div className={`border-2 rounded-full border-dark w-10 h-10 bg-primary`}></div> */}
     </div>
   );
 };
