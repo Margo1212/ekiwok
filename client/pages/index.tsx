@@ -6,7 +6,6 @@ import { Button } from '../components/Logo/Button/Button';
 import { Logo } from '../components/Logo/logo'
 import styles from '../styles/Home.module.css'
 
-
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
