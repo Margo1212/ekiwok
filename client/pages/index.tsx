@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         <Button text="Link do gry" icon={<Share1Icon className="fill-content w-7 h-7 mr-2" />} size="sm" />
         <Button text="Zasady" transparent size="sm" />
       </div>
-      <Text>dupa</Text>
+      <Text>to jest przyklad</Text>
     </div>
   );
 };
