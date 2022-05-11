@@ -11,12 +11,12 @@ const sizes = {
 };
 
 type BadgeProps = {
-  count: number;
+  count?: number;
   size?: keyof typeof sizes;
   variant?: keyof typeof variants;
 };
 
-const Badge = ({ count, size = 'lg', variant = 'outlined' }: BadgeProps) => {
+const Badge = ({ count = 0, size = 'lg', variant = 'outlined' }: BadgeProps) => {
   return (
     <div>
       <div
