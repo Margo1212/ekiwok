@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         <Button text="Zasady" transparent size="sm" />
       </div>
       <Text>to jest przyklad</Text>
-      <Timer time={9} onEnd={() => console.log('Koniec gry')} />
+      <Timer time={15} onEnd={() => console.log('Koniec gry')} />
     </div>
   );
 };

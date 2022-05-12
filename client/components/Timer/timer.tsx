@@ -13,11 +13,13 @@ function formatTime(time: number): string {
 
 export const Timer = ({ time, onEnd }: TimerProps) => {
   const [timeLeft, setTimeLeft] = useState(() => formatTime(time));
+  const [timeWarning, setTimeWarning] = useState(false);
 
   useEffect(() => {
     let remaining = time;
     const id = setInterval(() => {
       remaining -= 1;
+      if (remaining < 10) setTimeWarning(true);
       if (remaining <= 0) {
         clearInterval(id);
         onEnd && onEnd();
@@ -27,5 +29,6 @@ export const Timer = ({ time, onEnd }: TimerProps) => {
     return () => clearInterval(id);
   }, [time]);
 
-  return <span className="text-2xl text-primary">{timeLeft}</ span>;
+  const color = timeWarning ? 'text-red' : 'text-primary';
+  return <span className={`text-2xl ${color}`}>{timeLeft}</ span>;
 }
