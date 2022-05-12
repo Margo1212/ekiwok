@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 type TimerProps = {
   time: number;
@@ -27,7 +27,7 @@ export const Timer = ({ time, onEnd }: TimerProps) => {
       setTimeLeft(formatTime(remaining))
     }, 1000);
     return () => clearInterval(id);
-  }, [time]);
+  }, [time, onEnd]);
 
   const color = timeWarning ? 'text-red' : 'text-primary';
   return <span className={`text-2xl ${color}`}>{timeLeft}</ span>;
