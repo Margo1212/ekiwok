@@ -6,6 +6,7 @@ import { Input } from '../components/Input/Input';
 import { Button } from '../components/Logo/Button/Button';
 import { Logo } from '../components/Logo/logo';
 import { Text } from '../components/Text/text';
+import { Login } from '../modules/Login/Login';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
         <Button text="Zasady" transparent size="sm" />
       </div>
       <Text>to jest przyklad</Text>
+      <Login />
     </div>
   );
 };
