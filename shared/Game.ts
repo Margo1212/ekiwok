@@ -18,6 +18,6 @@ export type JoinGameRequest = BaseJoinGameRequest & { name: string };
 
 export type JoinGameResponse = AuthorizationPayload;
 
-export type ReJoinGameRequest = BaseJoinGameRequest & AuthorizationPayload;
+export type ConnectGameRequest = BaseJoinGameRequest & AuthorizationPayload;
 
-export type ReJoinGameResponse = {};
+export type ConnectGameResponse = {};
