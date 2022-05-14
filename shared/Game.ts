@@ -1,7 +1,21 @@
+import { Token } from "./Auth";
 import { GameId } from "./GameConnection";
-import { User } from "./User";
+import { PlayerSerialized } from "./Player";
 
-export type Game = {
+export type GameSerialized = {
   id: GameId;
-  players: User[];
+  players: PlayerSerialized[];
+};
+
+export type BaseGameRequest = {
+  token: Token;
+  gameId: GameId;
+};
+
+export type SendEmojiRequest = {
+  emoji: string;
+} & BaseGameRequest;
+
+export type SendEmojiResponse = {
+  emoji: string;
 };

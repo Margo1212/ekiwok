@@ -1,5 +1,6 @@
 import { AuthorizationPayload } from "./Auth";
-import { Game } from "./Game";
+import { GameSerialized } from "./Game";
+import { User } from "./User";
 
 export type GameId = string;
 
@@ -21,4 +22,6 @@ export type JoinGameResponse = AuthorizationPayload;
 
 export type ConnectGameRequest = BaseJoinGameRequest & AuthorizationPayload;
 
-export type ConnectGameResponse = Game;
+export type ConnectGameResponse = GameSerialized;
+
+export type UserJoinedResponse = { users: User[] };

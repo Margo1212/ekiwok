@@ -1,9 +1,9 @@
-import { Event, Payload } from '@shared';
+import { Payload, ServerEvent } from '@shared';
 import { useSocketEvent } from 'socket.io-react-hook';
 
-import { useSocket } from '../../auth/hooks/useSocket';
+import { useSocket } from './useSocket';
 
-export const useSubscribe = <Response extends Payload>(event: Event) => {
+export const useSubscribe = <Response extends Payload>(event: ServerEvent) => {
   const { socket } = useSocket();
   const { lastMessage } = useSocketEvent<Response>(socket, event);
 

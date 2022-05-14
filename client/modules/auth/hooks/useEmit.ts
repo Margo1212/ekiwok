@@ -1,10 +1,10 @@
-import { AuthorizationPayload, Event, Payload } from '@shared';
+import { AuthorizationPayload, ClientEvent, Payload } from '@shared';
 import { useCallback } from 'react';
 
-import { useSocket } from './useSocket';
+import { useSocket } from '../../common/hooks/useSocket';
 import { useToken } from './useToken';
 
-export const useEmit = <Request extends Payload, Response extends Payload>(event: Event) => {
+export const useEmit = <Request extends Payload, Response extends Payload>(event: ClientEvent) => {
   const { socket } = useSocket();
   const [token] = useToken();
 
