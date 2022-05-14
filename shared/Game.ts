@@ -16,6 +16,4 @@ export type SendEmojiRequest = {
   emoji: string;
 } & BaseGameRequest;
 
-export type SendEmojiResponse = {
-  emoji: string;
-};
+export type SendEmojiResponse = {};
