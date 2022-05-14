@@ -1,8 +1,8 @@
-import { Share1Icon } from '@radix-ui/react-icons';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import { Button } from '../components/Button/Button';
+import Icon from '../components/Icon/Icon';
 import { Input } from '../components/Input/Input';
 import { Logo } from '../components/Logo/logo';
 import { Text } from '../components/Text/text';
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
         <Button text="ZACZNIJ GRĘ" />
       </div>
       <div className="flex">
-        <Button text="Link do gry" icon={<Share1Icon className="fill-content w-7 h-7 mr-2" />} size="sm" />
+        <Button text="Link do gry" icon={<Icon type="share" className="mr-3" />} />
         <Button text="Zasady" transparent size="sm" />
       </div>
       <Text>to jest przyklad</Text>
