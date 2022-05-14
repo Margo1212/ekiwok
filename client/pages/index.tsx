@@ -2,6 +2,7 @@ import { Share1Icon } from '@radix-ui/react-icons';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+import Avatar from '../components/Avatar/Avatar';
 import { Input } from '../components/Input/Input';
 import { Button } from '../components/Logo/Button/Button';
 import { Logo } from '../components/Logo/logo';
@@ -28,6 +29,12 @@ const Home: NextPage = () => {
         <Button text="Zasady" transparent size="sm" />
       </div>
       <Text>to jest przyklad</Text>
+
+      <div className="flex items-center">
+        <Avatar username="Arnold" avatarNo={6} />
+        <Avatar username="Wąsek" avatarNo={3} size="lg" />
+        <Avatar username="Munio" avatarNo={4} size="sm" />
+      </div>
     </div>
   );
 };
