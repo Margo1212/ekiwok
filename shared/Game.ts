@@ -1,23 +1,7 @@
-import { AuthorizationPayload } from "./Auth";
+import { GameId } from "./GameConnection";
+import { User } from "./User";
 
-export type GameId = string;
-
-export type CreateGameRequest = {
-  hostName: string;
+export type Game = {
+  id: GameId;
+  players: User[];
 };
-
-export type CreateGameResponse = {
-  gameId: GameId;
-} & AuthorizationPayload;
-
-type BaseJoinGameRequest = {
-  gameId: GameId;
-};
-
-export type JoinGameRequest = BaseJoinGameRequest & { name: string };
-
-export type JoinGameResponse = AuthorizationPayload;
-
-export type ConnectGameRequest = BaseJoinGameRequest & AuthorizationPayload;
-
-export type ConnectGameResponse = {};

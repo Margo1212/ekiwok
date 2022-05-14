@@ -1,4 +1,5 @@
 import { Share1Icon } from '@radix-ui/react-icons';
+import { CreateGame } from 'modules/auth/components/CreateGame';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
         <Button text="Zasady" transparent size="sm" />
       </div>
       <Text>to jest przyklad</Text>
+      <CreateGame />
     </div>
   );
 };

@@ -2,14 +2,14 @@ import { Input } from 'components/Input/Input';
 import { Button } from 'components/Logo/Button/Button';
 import { useState } from 'react';
 
-import { useJoinGame } from '../hooks/useJoinGame';
+import { useCreateGame } from '../hooks/useCreateGame';
 
-export const JoinGame = () => {
-  const [name] = useState('Jan Kowalski');
-  const joinTheGame = useJoinGame();
+export const CreateGame = () => {
+  const [name] = useState('Krzysztof Jarzyna');
+  const createTheGame = useCreateGame();
 
   const handleClick = () => {
-    joinTheGame(name);
+    createTheGame(name);
   };
 
   return (
