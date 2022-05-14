@@ -2,10 +2,11 @@ import { Share1Icon } from '@radix-ui/react-icons';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+import { Button } from '../components/Button/Button';
 import { Input } from '../components/Input/Input';
-import { Button } from '../components/Logo/Button/Button';
 import { Logo } from '../components/Logo/logo';
 import { Text } from '../components/Text/text';
+import { Timer } from '../components/Timer/timer';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
         <Button text="Zasady" transparent size="sm" />
       </div>
       <Text>to jest przyklad</Text>
+      <Timer seconds={15} onEnd={() => console.log('Koniec gry')} />
     </div>
   );
 };
