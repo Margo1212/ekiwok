@@ -28,7 +28,7 @@ export const Input = ({ placeholder, icon, iconPosition, sizeOfInput, onChange, 
         <span className="text-border pl-0 sm:text-sm">{icon}</span>
       </div>
       <input
-        className={`bg-background placeholder-border text-white focus:ring-indigo-500 focus:border-indigo-500 block w-full ${size} px-12 sm:text-sm border-border rounded-xl`}
+        className={`bg-background placeholder-border text-white focus:ring-indigo-500 focus:border-indigo-500 block w-full ${size} px-12 sm:text-sm border-2 border-border rounded-xl`}
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
