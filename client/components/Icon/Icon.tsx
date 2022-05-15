@@ -1,4 +1,4 @@
-import { FaceIcon, PersonIcon } from '@radix-ui/react-icons';
+import { FaceIcon, PersonIcon, Share1Icon } from '@radix-ui/react-icons';
 import React from 'react';
 
 const sizes = {
@@ -8,19 +8,19 @@ const sizes = {
 };
 
 type IconTypeProps = {
-  type: 'user' | 'emotikon';
-  size: keyof typeof sizes;
+  type: 'user' | 'emotikon' | 'share';
+  size?: keyof typeof sizes;
+  className?: string;
 };
 
-const Icon = ({ type, size }: IconTypeProps) => {
+const Icon = ({ type, size = 'md', className }: IconTypeProps) => {
   return (
-    <>
-      <div className="p-1">
-        {type === 'user' ? <PersonIcon height={sizes[size]} width={sizes[size]} /> : null}
-        {type === 'emotikon' ? <FaceIcon height={sizes[size]} width={sizes[size]} /> : null}
-      </div>
-    </>
+    <div className={className}>
+      {type === 'user' ? <PersonIcon height={sizes[size]} width={sizes[size]} /> : null}
+      {type === 'emotikon' ? <FaceIcon height={sizes[size]} width={sizes[size]} /> : null}
+      {type === 'share' ? <Share1Icon height={sizes[size]} width={sizes[size]} /> : null}
+    </div>
   );
 };
 
-export default Icon;
+export { Icon };

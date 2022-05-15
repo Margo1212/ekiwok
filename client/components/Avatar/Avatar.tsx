@@ -30,4 +30,4 @@ const Avatar = ({ username, avatarNo, size = 'lg' }: AvatarProps) => {
   );
 };
 
-export default Avatar;
+export { Avatar };
