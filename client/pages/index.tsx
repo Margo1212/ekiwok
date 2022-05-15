@@ -1,10 +1,10 @@
 import { Share1Icon } from '@radix-ui/react-icons';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import { Button } from '../components/Button/Button';
 import { Input } from '../components/Input/Input';
-import { Logo } from '../components/Logo/logo';
 import { Text } from '../components/Text/text';
 import { Timer } from '../components/Timer/timer';
 import styles from '../styles/Home.module.css';
@@ -19,7 +19,6 @@ const Home: NextPage = () => {
       </Head>
       <Input sizeOfInput="md" placeholder="USER12345" iconPosition="left" />
       <Input sizeOfInput="sm" iconPosition="right" />
-      <Logo />
       <div>
         <Button text="ZASADY GRY" transparent />
         <Button text="ZACZNIJ GRĘ" />
@@ -30,6 +29,12 @@ const Home: NextPage = () => {
       </div>
       <Text>to jest przyklad</Text>
       <Timer seconds={15} onEnd={() => console.log('Koniec gry')} />
+      <Link href="/Game/">
+        <a>Game</a>
+      </Link>
+      <Link href="/Game1/">
+        <a>Game1</a>
+      </Link>
     </div>
   );
 };
