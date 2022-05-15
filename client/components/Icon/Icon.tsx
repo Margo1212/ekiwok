@@ -23,4 +23,4 @@ const Icon = ({ type, size = 'md', className }: IconTypeProps) => {
   );
 };
 
-export default Icon;
+export { Icon };

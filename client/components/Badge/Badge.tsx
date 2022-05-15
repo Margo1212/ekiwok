@@ -39,4 +39,4 @@ const Badge = ({ count = 0, size = 'lg', variant = 'outlined' }: BadgeProps) => 
   );
 };
 
-export default Badge;
+export { Badge };

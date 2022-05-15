@@ -1,9 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import Badge from '../components/Badge/Badge';
+import { Avatar } from '../components/Avatar/Avatar';
+import { Badge } from '../components/Badge/Badge';
 import { Button } from '../components/Button/Button';
-import Icon from '../components/Icon/Icon';
+import { Icon } from '../components/Icon/Icon';
 import { Input } from '../components/Input/Input';
 import { Logo } from '../components/Logo/logo';
 import { Text } from '../components/Text/text';
@@ -35,6 +36,12 @@ const Home: NextPage = () => {
       </div>
       <Text>to jest przyklad</Text>
       <Timer seconds={15} onEnd={() => console.log('Koniec gry')} />
+
+      <div className="flex items-center">
+        <Avatar username="Arnold" avatarNo={6} />
+        <Avatar username="Wąsek" avatarNo={3} size="lg" />
+        <Avatar username="Munio" avatarNo={4} size="sm" />
+      </div>
     </div>
   );
 };
