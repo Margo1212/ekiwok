@@ -13,7 +13,7 @@ module.exports = {
       },
       height: {
         "88v": "88vh",
-        "130v": "130vh"
+        "100v": "100vh"
       },
       screens: {
       'mobile' : {'min': '300px', 'max': '428px'},
