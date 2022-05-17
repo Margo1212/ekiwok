@@ -1,13 +1,13 @@
 import React from 'react';
 
 const variants = {
-  outlined: { color: 'primary', bg: '' },
-  filled: { color: 'dark', bg: 'primary' },
+  outlined: { color: 'text-primary', bg: '', border: 'border-primary' },
+  filled: { color: 'text-dark', bg: 'bg-primary', border: 'border-dark' },
 };
 
 const sizes = {
-  sm: { height: 10, border: 2, txtSize: 'xl' },
-  lg: { height: 24, border: 4, txtSize: '5xl' },
+  sm: { height: 'h-10', width: 'w-10', border: 'border-2', txtSize: 'text-xl' },
+  lg: { height: 'h-24', width: 'w-24', border: 'border-4', txtSize: 'text-5xl' },
 };
 
 type BadgeProps = {
@@ -25,18 +25,18 @@ const Badge = ({ count = 0, size = 'lg', variant = 'outlined' }: BadgeProps) => 
           flex
           justify-center
           items-center
-          border-${sizes[size].border}
-          border-${variants[variant].color}
           rounded-full
-          w-${sizes[size].height}
-          h-${sizes[size].height}
-          bg-${variants[variant].bg}
+          ${sizes[size].border}
+          ${variants[variant].border}
+          ${sizes[size].width}
+          ${sizes[size].height}
+          ${variants[variant].bg}
         `}
       >
-        <p className={`font-semibold text-${sizes[size].txtSize} text-${variants[variant].color}`}>{count}</p>
+        <p className={`font-semibold ${sizes[size].txtSize} ${variants[variant].color}`}>{count}</p>
       </div>
     </div>
   );
 };
 
-export default Badge;
+export { Badge };
