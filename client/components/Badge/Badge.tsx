@@ -21,7 +21,7 @@ const Badge = ({ count = 0, size = 'lg', variant = 'outlined' }: BadgeProps) => 
     <div>
       <div
         className={`
-          m-2
+          mx-4
           flex
           justify-center
           items-center

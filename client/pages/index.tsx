@@ -1,3 +1,4 @@
+import { CreateGame } from 'modules/auth/components/CreateGame';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
         <Badge count={8} size="sm" />
       </div>
       <Text>to jest przyklad</Text>
+      <CreateGame />
       <Timer seconds={15} onEnd={() => console.log('Koniec gry')} />
       <Link href="/Game/">
         <a>Game</a>

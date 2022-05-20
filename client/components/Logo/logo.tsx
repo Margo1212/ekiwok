@@ -1,9 +1,9 @@
-type LogoPropsType = {
-  width: string;
-  height: string;
+type LogoProps = {
+  width?: string;
+  height?: string;
 };
 
-export const Logo = ({ width, height }: LogoPropsType) => {
+export const Logo = ({ width = '366', height = '103' }: LogoProps) => {
   return (
     <svg width={width} height={height} viewBox="0 0 376 103" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d_26_3)">

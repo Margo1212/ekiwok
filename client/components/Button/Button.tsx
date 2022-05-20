@@ -1,6 +1,5 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-
 type ButtonProps = {
   text: string;
   transparent?: boolean;

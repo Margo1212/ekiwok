@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/402-coders/ekiwok/issues"
   },
-  "homepage": "https://github.com/402-coders/ekiwok#readme"
+  "homepage": "https://github.com/402-coders/ekiwok#readme",
+  "devDependencies": {
+    "nx": "14.1.5"
+  }
 }
