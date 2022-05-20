@@ -1,3 +1,4 @@
+import { Emoji } from 'components/Emoji/emoji';
 import { CreateGame } from 'modules/auth/components/CreateGame';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -43,6 +44,9 @@ const Home: NextPage = () => {
         <Avatar username="Wąsek" avatarNo={3} size="lg" />
         <Avatar username="Munio" avatarNo={4} size="sm" />
       </div>
+      <Emoji icon="noto:anguished-face" size="lg" />
+      <Emoji icon="noto:pensive-face" size="sm" />
+      <Emoji icon="noto:smiling-face-with-smiling-eyes" size="md" />
     </div>
   );
 };
