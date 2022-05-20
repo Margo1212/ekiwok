@@ -38,6 +38,3 @@ yarn-error.log*
 
 # Env
 .env
-
-#DB
-server/prisma/*.db
