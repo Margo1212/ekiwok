@@ -9,8 +9,9 @@ import { ExtendedRequest, GameByIdPipe } from 'src/pipes/game.pipe';
 export class GameplayGateway {
   @SubscribeEvent('send-emoji')
   handleNewEmoji(socket: Socket, @MessageBody(GameByIdPipe) request: ExtendedRequest<SendEmojiRequest>): SendEmojiResponse {
-    const { game } = request;
-    console.log(game.serialize());
+    const { game, user, emoji } = request;
+    game.handleNewEmoji(user, emoji);
+
     return {};
   }
 }

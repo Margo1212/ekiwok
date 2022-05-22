@@ -13,6 +13,10 @@ export class Player {
     return this.user.socketId;
   }
 
+  compare(id: string): boolean {
+    return this.user.id === id;
+  }
+
   serialize(): PlayerSerialized {
     return { id: this.user.id, name: this.user.name, score: this.score, socketId: this.user.socketId };
   }

@@ -4,4 +4,8 @@ export type ClientEvent =
   | "game-create"
   | "send-emoji";
 
-export type ServerEvent = "new-user" | "game-started" | "new-question";
+export type ServerEvent =
+  | "new-user"
+  | "game-started"
+  | "new-question"
+  | "new-message";
