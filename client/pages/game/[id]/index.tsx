@@ -1,22 +1,35 @@
-import { Text } from 'components/Text/text';
+import { Button } from 'components/Button/Button';
+import { EmojiList } from 'components/game-components/EmojiList';
+import { EmojiToGuess } from 'components/game-components/EmojiToGuess';
+import { MessagesField } from 'components/game-components/MessagesField';
+import { Users } from 'components/game-components/Users';
+import { Navigation } from 'components/Navigation/Navigation';
 import { useConnect } from 'modules/auth';
-import { useUserJoined } from 'modules/auth/hooks/useUserJoined';
 import { NextPage } from 'next';
+import { useState } from 'react';
 
 const GamePage: NextPage = () => {
   const game = useConnect();
-  const payload = useUserJoined();
+
+  const [isCurrentPlayer, setIsCurrentPlayer] = useState(false);
+
+  const handleClick = () => {
+    setIsCurrentPlayer(!isCurrentPlayer);
+  };
 
   if (!game) return null;
 
-  const players = payload?.users?.length > 0 ? payload.users : game.players;
-
   return (
-    <>
-      {players.map(({ name, id }) => (
-        <Text key={id}>{name}</Text>
-      ))}
-    </>
+    <div className="h-screen">
+      <Navigation />
+      <div className="h-88v grid grid-cols-3 grid-rows-2 gap-x-20 gap-y-12 px-12 py-8 mobile:flex mobile:flex-wrap mobile:h-full">
+        <EmojiToGuess visibleEmojiCard={!isCurrentPlayer} />
+        <EmojiList stretch={isCurrentPlayer} />
+        <MessagesField />
+        <Users users={game.players} />
+      </div>
+      <Button text="Click me" onClick={handleClick} />
+    </div>
   );
 };
 
