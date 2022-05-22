@@ -22,7 +22,7 @@ export const Navigation = () => {
         </div>
 
         <Button
-          onClick={() => copyToClipboard(window.location.href)}
+          onClick={() => copyToClipboard(`${window.location.href}/join`)}
           text="Link do gry"
           icon={<Share1Icon className="fill-content w-7 h-7 mr-2" />}
           size="sm"

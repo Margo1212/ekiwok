@@ -1,14 +1,22 @@
+import { useUserJoined } from 'modules/auth/hooks/useUserJoined';
+
+import { User } from '../../../shared/User';
 import { Avatar } from '../Avatar/Avatar';
 import { Badge } from '../Badge/Badge';
 
-const Users = () => {
-  const users = ['Basia', 'Kasia', 'Andrzej', 'Grzesiek', 'Ania'];
+export type UsersProps = {
+  users: User[];
+};
+
+const Users = ({ users }: UsersProps) => {
+  const payload = useUserJoined();
+  const players = payload?.users?.length > 0 ? payload.users : users;
 
   return (
     <div className="col-span-2 mobile:basis-1/6 h-full flex justify-between mobile:flex-col">
-      {users.map((user, idx) => (
-        <div key={idx} className="flex flex-col">
-          <Avatar username={user} avatarNo={1} />
+      {players.map((player, idx) => (
+        <div key={idx} className="flex flex-col justify-center">
+          <Avatar username={player.name} avatarNo={1} />
           <Badge count={3} variant="outlined" />
         </div>
       ))}

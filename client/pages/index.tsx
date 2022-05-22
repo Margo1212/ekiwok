@@ -39,10 +39,6 @@ const Home: NextPage = () => {
       <Text>to jest przyklad</Text>
       <CreateGame />
       <Timer seconds={15} onEnd={() => console.log('Koniec gry')} />
-      <Link href="/Game/">
-        <a>Game</a>
-      </Link>
-
       <div className="flex items-center">
         <Avatar username="Arnold" avatarNo={6} />
         <Avatar username="Wąsek" avatarNo={3} size="lg" />
