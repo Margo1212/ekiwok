@@ -25,7 +25,7 @@ const GamePage: NextPage = () => {
       <div className="h-88v grid grid-cols-3 grid-rows-2 gap-x-20 gap-y-12 px-12 py-8 mobile:flex mobile:flex-wrap mobile:h-full">
         <EmojiToGuess visibleEmojiCard={!isCurrentPlayer} />
         <EmojiList stretch={isCurrentPlayer} />
-        <MessagesField />
+        <MessagesField chat={game.chat} />
         <Users users={game.players} />
       </div>
       <Button text="Click me" onClick={handleClick} />
