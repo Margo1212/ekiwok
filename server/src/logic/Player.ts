@@ -1,4 +1,4 @@
-import { User, PlayerSerialized } from '@shared';
+import { PlayerSerialized, User } from '@shared';
 
 export class Player {
   private readonly user: User;

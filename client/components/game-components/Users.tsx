@@ -1,11 +1,11 @@
-import { User } from '@shared';
+import { Player } from '@shared';
 import { useUserJoined } from 'modules/auth/hooks/useUserJoined';
 
 import { Avatar } from '../Avatar/Avatar';
 import { Badge } from '../Badge/Badge';
 
 export type UsersProps = {
-  users: User[];
+  users: Player[];
 };
 
 const Users = ({ users }: UsersProps) => {

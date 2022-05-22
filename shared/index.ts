@@ -6,3 +6,4 @@ export * from "./Payload";
 export * from "./Game";
 export * from "./Player";
 export * from "./Question";
+export * from "./Message";

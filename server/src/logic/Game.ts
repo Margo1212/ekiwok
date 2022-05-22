@@ -8,7 +8,6 @@ import { Server } from 'socket.io';
 export class Game {
   private id: GameId;
   private players: Player[];
-  private host: User;
   private question: Question;
   private currentPlayerIndex: 0;
   private server: Server;
@@ -18,7 +17,6 @@ export class Game {
     this.id = getUniqueId();
     this.question = new Question();
     this.players = [];
-    this.host = host;
     this.currentPlayerIndex = 0;
     this.addPlayer(host);
   }
