@@ -1,19 +1,31 @@
-import { User, PlayerSerialized } from '@shared';
+import { PlayerSerialized, User } from '@shared';
+import { gameConfig } from 'src/config/game.config';
 
 export class Player {
-  private id: string;
-  private name: string;
+  private readonly user: User;
   private score: number;
-  private socketId: string;
 
   constructor(user: User) {
-    this.id = user.id;
-    this.name = user.name;
-    this.socketId = user.socketId;
+    this.user = user;
     this.score = 0;
   }
 
+  public get socketId(): string {
+    return this.user.socketId;
+  }
+
+  addPointsForGuessing() {
+    this.score += gameConfig.pointsForGuessingEmoji;
+  }
+  addPointsForHavingEmojiGuessed() {
+    this.score += gameConfig.pointsForHavingEmojiGuessed;
+  }
+
+  compare(id: string): boolean {
+    return this.user.id === id;
+  }
+
   serialize(): PlayerSerialized {
-    return { id: this.id, name: this.name, score: this.score, socketId: this.socketId };
+    return { id: this.user.id, name: this.user.name, score: this.score, socketId: this.user.socketId };
   }
 }

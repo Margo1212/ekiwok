@@ -21,7 +21,6 @@ export const Navigation = () => {
         <div className="mobile:hidden">
           <Button text="Zasady" transparent size="sm" />
         </div>
-
         <Tooltip message="copied">
           <Button
             onClick={() => copyToClipboard(`${window.location.href}/join`)}

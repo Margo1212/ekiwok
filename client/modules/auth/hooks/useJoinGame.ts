@@ -12,7 +12,7 @@ export const useJoinGame = () => {
   const { push } = useRouter();
 
   const joinGame = async (name: string) => {
-    const { token } = await emit({ name, gameId });
+    const { token } = await emit({ name });
     setToken(token);
     push(`/game/${gameId}`);
   };
