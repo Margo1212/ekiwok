@@ -1,4 +1,5 @@
 import { Share1Icon } from '@radix-ui/react-icons';
+import { Tooltip } from 'components/Tooltip/Tooltip';
 import { useCopyToClipboard } from 'react-use';
 
 import { Button } from '../Button/Button';
@@ -20,13 +21,14 @@ export const Navigation = () => {
         <div className="mobile:hidden">
           <Button text="Zasady" transparent size="sm" />
         </div>
-
-        <Button
-          onClick={() => copyToClipboard(window.location.href + '/join')}
-          text="Link do gry"
-          icon={<Share1Icon className="fill-content w-7 h-7 mr-2" />}
-          size="sm"
-        />
+        <Tooltip message="copied">
+          <Button
+            onClick={() => copyToClipboard(`${window.location.href}/join`)}
+            text="Link do gry"
+            icon={<Share1Icon className="fill-content w-7 h-7 mr-2" />}
+            size="sm"
+          />
+        </Tooltip>
       </div>
     </nav>
   );
