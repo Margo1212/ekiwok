@@ -49,9 +49,7 @@ export class Game {
   }
 
   private sendQuestion(): void {
-    this.server.to(this.currentPlayer.socketId).emit('new-question', {
-      question: this.question.serialize(),
-    });
+    this.server.to(this.currentPlayer.socketId).emit('new-question', this.question.serialize());
   }
 
   private startTheGame(): void {

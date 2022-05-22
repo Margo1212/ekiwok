@@ -1,4 +1,4 @@
-import { Icon } from '@iconify/react';
+import { Icon, IconProps } from '@iconify/react';
 import React from 'react';
 
 const sizes = {
@@ -7,15 +7,13 @@ const sizes = {
   lg: 50,
 };
 
-type EmojiTypeProps = {
-  size: keyof typeof sizes;
+export type EmojiTypeProps = {
+  size?: keyof typeof sizes;
   icon: string;
-};
+} & IconProps;
 
-const Emoji = ({ icon, size }: EmojiTypeProps) => {
-  return (
-    <Icon icon={icon} width={sizes[size]} />
-  );
+const Emoji = ({ icon, size = 'md', ...rest }: EmojiTypeProps) => {
+  return <Icon className="inline-flex" icon={`noto:${icon}`} width={sizes[size]} {...rest} />;
 };
 
 export { Emoji };
