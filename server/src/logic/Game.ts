@@ -70,6 +70,8 @@ export class Game {
     if (this.question.isCorrect(emoji)) {
       sender.addPointsForGuessing();
       this.currentPlayer.addPointsForHavingEmojiGuessed();
+
+      this.emitEvent('point-scored', { players: this.players.map((player) => player.serialize()) });
       this.goToNextQuestion();
       return;
     }

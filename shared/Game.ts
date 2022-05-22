@@ -26,3 +26,7 @@ export type SendEmojiResponse = {};
 export type NewRoundPayload = {
   currentPlayer: PlayerSerialized;
 };
+
+export type PointScoredPayload = {
+  players: PlayerSerialized[];
+};

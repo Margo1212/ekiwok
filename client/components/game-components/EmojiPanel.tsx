@@ -26,7 +26,7 @@ export const EmojiPanel = ({ currentQuestion }: EmojiPanelProps) => {
   return (
     <>
       <EmojiToGuess question={question} />
-      <EmojiList stretch={Boolean(question)} />
+      <EmojiList stretch={Boolean(!question)} />
     </>
   );
 };

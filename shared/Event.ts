@@ -9,4 +9,5 @@ export type ServerEvent =
   | "game-started"
   | "new-question"
   | "new-message"
-  | "new-round";
+  | "new-round"
+  | "point-scored";
