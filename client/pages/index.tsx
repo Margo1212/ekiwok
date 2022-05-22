@@ -2,6 +2,7 @@ import { Emoji } from 'components/Emoji/emoji';
 import { CreateGame } from 'modules/auth/components/CreateGame';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import { Avatar } from '../components/Avatar/Avatar';
 import { Badge } from '../components/Badge/Badge';
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
       </Head>
       <Input sizeOfInput="md" placeholder="USER12345" icon={<Icon type="user" size="md" />} iconPosition="left" />
       <Input sizeOfInput="sm" iconPosition="right" icon={<Icon type="emotikon" size="sm" />} />
-      <Logo />
+      <Logo width="366px" height="103px" />
       <div>
         <Button text="ZASADY GRY" transparent />
         <Button text="ZACZNIJ GRĘ" />

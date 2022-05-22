@@ -14,6 +14,13 @@ module.exports = {
         dark: '#230D29',
         white: '#ffffff',
       },
+      height: {
+        "88v": "88vh",
+        "100v": "100vh"
+      },
+      screens: {
+      'mobile' : {'min': '300px', 'max': '428px'},
+    },
     },
     fontFamily: {
       'Baloo 2': ['Baloo 2', 'cursive'],
