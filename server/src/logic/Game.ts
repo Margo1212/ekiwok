@@ -10,7 +10,7 @@ import { Chat } from './Chat';
 export class Game {
   private id: GameId;
   private question: Question;
-  private currentPlayerIndex: 0;
+  private currentPlayerIndex: number;
   private readonly players: Player[];
   private readonly server: Server;
   private readonly chat: Chat;
@@ -53,6 +53,7 @@ export class Game {
       this.addNewHint(emoji);
       return;
     }
+
     this.addNewGuess(this.findPlayer(sender.id), emoji);
   }
 
@@ -67,14 +68,22 @@ export class Game {
     this.emitEvent('new-message', message);
 
     if (this.question.isCorrect(emoji)) {
-      console.log('Correct! Go to next turn');
+      sender.addPointsForGuessing();
+      this.currentPlayer.addPointsForHavingEmojiGuessed();
+      this.goToNextQuestion();
       return;
     }
+  }
 
-    console.log('Wrong');
+  private goToNextQuestion(): void {
+    this.nextPlayer();
+    this.question = new Question();
+    this.sendQuestion();
   }
 
   private sendQuestion(): void {
+    // Clearing question asking mode in all clients
+    this.server.in(this.id).except(this.currentPlayer.socketId).emit('new-question', undefined);
     this.server.to(this.currentPlayer.socketId).emit('new-question', this.question.serialize());
   }
 
@@ -95,5 +104,11 @@ export class Game {
 
   private findPlayer(id: string): Player {
     return this.players.find((player) => player.compare(id))!;
+  }
+
+  private nextPlayer(): void {
+    console.log('🚀 ~ file: Game.ts ~ line 111 ~ Game ~ nextPlayer ~ this.currentPlayerIndex', this.currentPlayerIndex);
+    this.currentPlayerIndex = this.currentPlayerIndex !== this.players.length - 1 ? this.currentPlayerIndex + 1 : 0;
+    console.log('🚀 ~ file: Game.ts ~ line 111 ~ Game ~ nextPlayer ~ this.currentPlayerIndex', this.currentPlayerIndex);
   }
 }

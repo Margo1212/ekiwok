@@ -14,8 +14,7 @@ export const EmojiPanel = ({ currentQuestion }: EmojiPanelProps) => {
   const [question, setQuestion] = useState<QuestionSerialized | undefined>();
 
   useEffect(() => {
-    const questionCandidate = lastEmittedQuestion ?? currentQuestion;
-    if (questionCandidate) setQuestion(questionCandidate);
+    setQuestion(lastEmittedQuestion);
   }, [currentQuestion?.id, lastEmittedQuestion?.id]);
 
   return (
