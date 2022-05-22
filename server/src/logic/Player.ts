@@ -1,4 +1,5 @@
 import { PlayerSerialized, User } from '@shared';
+import { gameConfig } from 'src/config/game.config';
 
 export class Player {
   private readonly user: User;
@@ -11,6 +12,13 @@ export class Player {
 
   public get socketId(): string {
     return this.user.socketId;
+  }
+
+  addPointsForGuessing() {
+    this.score += gameConfig.pointsForGuessingEmoji;
+  }
+  addPointsForHavingEmojiGuessed() {
+    this.score += gameConfig.pointsForHavingEmojiGuessed;
   }
 
   compare(id: string): boolean {

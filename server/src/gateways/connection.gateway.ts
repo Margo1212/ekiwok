@@ -28,7 +28,7 @@ export class ConnectionGateway {
     if (!game) throw new Error('Nie ma takiej gry');
 
     game.addPlayer(user);
-    const gameInfo = game.serialize();
+    const gameInfo = game.serialize(user.id);
     socket.to(gameInfo.id).emit('new-user', { users: gameInfo.players });
 
     return { token: user.id };
@@ -45,6 +45,6 @@ export class ConnectionGateway {
 
     socket.join(gameId);
 
-    return game.serialize();
+    return game.serialize(user.id);
   }
 }

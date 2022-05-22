@@ -12,7 +12,7 @@ export class GameRoomService {
     const game = new Game(host, server);
     this.games.push(game);
 
-    return game.serialize();
+    return game.serialize(host.id);
   }
 
   findGame(gameId: GameId) {

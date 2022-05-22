@@ -37,12 +37,14 @@ export class Game {
     return this.id === gameId;
   }
 
-  serialize(): GameSerialized {
+  serialize(userId: string): GameSerialized {
+    const isCurrentPlayer = this.currentPlayer.compare(userId);
     return {
       id: this.id,
       players: this.players.map((player) => player.serialize()),
       currentPlayer: this.currentPlayer.serialize(),
       chat: this.chat.serialize(),
+      question: isCurrentPlayer ? this.question.serialize() : undefined,
     };
   }
 
