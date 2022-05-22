@@ -48,7 +48,16 @@ export class Game {
     return this.players[this.currentPlayerIndex]!;
   }
 
+  private sendQuestion(): void {
+    this.server.to(this.currentPlayer.socketId).emit('new-question', {
+      question: this.question.serialize(),
+    });
+  }
+
   private startTheGame(): void {
-    this.server.in(this.id).emit('game-created', {});
+    setTimeout(() => {
+      this.server.in(this.id).emit('game-started', {});
+      this.sendQuestion();
+    }, 3000);
   }
 }

@@ -2,6 +2,6 @@ export type ClientEvent =
   | "game-join"
   | "game-connect"
   | "game-create"
-  | "submit-emoji";
+  | "send-emoji";
 
-export type ServerEvent = "new-user" | "game-started";
+export type ServerEvent = "new-user" | "game-started" | "new-question";

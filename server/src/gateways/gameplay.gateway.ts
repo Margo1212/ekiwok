@@ -6,7 +6,7 @@ import { SubscribeEvent } from 'src/common/SubscribeEvent';
 
 @WebSocketGateway({ cors: true })
 export class GameplayGateway {
-  @SubscribeEvent('submit-emoji')
+  @SubscribeEvent('send-emoji')
   handleNewEmoji(socket: Socket, request: SendEmojiRequest): SendEmojiResponse {
     return {};
   }
