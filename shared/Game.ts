@@ -22,3 +22,7 @@ export type SendEmojiRequest = {
 } & BaseGameRequest;
 
 export type SendEmojiResponse = {};
+
+export type NewRoundPayload = {
+  currentPlayer: PlayerSerialized;
+};

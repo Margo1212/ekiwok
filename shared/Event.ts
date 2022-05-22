@@ -8,4 +8,5 @@ export type ServerEvent =
   | "new-user"
   | "game-started"
   | "new-question"
-  | "new-message";
+  | "new-message"
+  | "new-round";

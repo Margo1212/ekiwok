@@ -6,7 +6,6 @@ import { NextPage } from 'next';
 
 const GamePage: NextPage = () => {
   const game = useConnect();
-  console.log('🚀 ~ file: index.tsx ~ line 9 ~ game', game);
 
   if (!game) return null;
 

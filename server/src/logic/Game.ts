@@ -77,13 +77,12 @@ export class Game {
 
   private goToNextQuestion(): void {
     this.nextPlayer();
+    this.emitEvent('new-round', { currentPlayer: this.currentPlayer.serialize() });
     this.question = new Question();
     this.sendQuestion();
   }
 
   private sendQuestion(): void {
-    // Clearing question asking mode in all clients
-    this.server.in(this.id).except(this.currentPlayer.socketId).emit('new-question', undefined);
     this.server.to(this.currentPlayer.socketId).emit('new-question', this.question.serialize());
   }
 
@@ -107,8 +106,6 @@ export class Game {
   }
 
   private nextPlayer(): void {
-    console.log('🚀 ~ file: Game.ts ~ line 111 ~ Game ~ nextPlayer ~ this.currentPlayerIndex', this.currentPlayerIndex);
     this.currentPlayerIndex = this.currentPlayerIndex !== this.players.length - 1 ? this.currentPlayerIndex + 1 : 0;
-    console.log('🚀 ~ file: Game.ts ~ line 111 ~ Game ~ nextPlayer ~ this.currentPlayerIndex', this.currentPlayerIndex);
   }
 }
