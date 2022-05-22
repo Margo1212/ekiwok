@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useJoinGame } from '../hooks/useJoinGame';
 
 export const JoinGame = () => {
-  const [name] = useState('Jan Kowalski');
+  const [name, setName] = useState('');
   const joinTheGame = useJoinGame();
 
   const handleClick = () => {
@@ -18,9 +18,9 @@ export const JoinGame = () => {
       <div className="flex justify-around items-center flex-col h-64 ">
         <Text>Podaj swój pseudonim</Text>
         <div className="max-w-md">
-          <Input sizeOfInput="md" iconPosition="right" />
+          <Input sizeOfInput="md" iconPosition="right" value={name} onChange={setName as any} />
         </div>
-        <Button text="Dołącz do gry" onClick={handleClick} />
+        <Button text="Dołącz do gry" onClick={handleClick} disabled={name.length < 1} />
       </div>
     </div>
   );

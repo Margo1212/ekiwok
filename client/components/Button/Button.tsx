@@ -11,7 +11,7 @@ export const Button = ({ text, icon, size: buttonSize, transparent, ...props }: 
   const size = buttonSize === 'sm' ? 'py-2 text-xl' : 'py-3 text-2xl';
   const color = transparent ? 'text-primary' : 'text-secondary';
   const background = transparent ? 'bg-transparent' : 'bg-primary';
-  const hover = 'hover:opacity-75';
+  const hover = props.disabled ? 'disabled:opacity-50' : 'hover:opacity-75';
 
   return (
     <button
