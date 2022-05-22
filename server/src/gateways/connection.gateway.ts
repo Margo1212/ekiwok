@@ -1,5 +1,5 @@
-import { WebSocketGateway } from '@nestjs/websockets';
-import { Socket } from 'socket.io';
+import { WebSocketGateway, WebSocketServer } from '@nestjs/websockets';
+import { Server, Socket } from 'socket.io';
 import { ConnectGameRequest, ConnectGameResponse, CreateGameRequest, CreateGameResponse, JoinGameRequest, JoinGameResponse } from '@shared';
 import { UserService } from '../services/user.service';
 import { SubscribeEvent } from '../common/SubscribeEvent';
@@ -7,12 +7,15 @@ import { GameRoomService } from 'src/services/game-room.service';
 
 @WebSocketGateway({ cors: true })
 export class ConnectionGateway {
+  @WebSocketServer()
+  server!: Server;
+
   constructor(private userService: UserService, private gameService: GameRoomService) {}
 
   @SubscribeEvent('game-create')
   createGame(socket: Socket, { hostName }: CreateGameRequest): CreateGameResponse {
     const host = this.userService.createUser(socket.id, hostName);
-    const game = this.gameService.createGame(host);
+    const game = this.gameService.createGame(host, this.server);
 
     return { gameId: game.id, token: host.id };
   }
@@ -36,6 +39,7 @@ export class ConnectionGateway {
     const user = this.userService.getUser(token);
     if (!user) throw new Error('Nie wiem kim jesteś');
 
+    this.userService.assignSocketIdToUser(user.id, socket.id);
     const game = this.gameService.findGame(gameId);
     if (!game) throw new Error('Nie ma takiej gry');
 

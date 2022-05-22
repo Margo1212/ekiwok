@@ -4,4 +4,4 @@ export type ClientEvent =
   | "game-create"
   | "submit-emoji";
 
-export type ServerEvent = "new-user";
+export type ServerEvent = "new-user" | "game-started";

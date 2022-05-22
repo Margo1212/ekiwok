@@ -5,6 +5,7 @@ import { PlayerSerialized } from "./Player";
 export type GameSerialized = {
   id: GameId;
   players: PlayerSerialized[];
+  currentPlayer: PlayerSerialized;
 };
 
 export type BaseGameRequest = {

@@ -6,6 +6,6 @@ import { GameplayGateway } from './gateways/gameplay.gateway';
 
 @Module({
   imports: [],
-  providers: [ConnectionGateway, UserService, GameRoomService, GameplayGateway],
+  providers: [ConnectionGateway, GameplayGateway, UserService, GameRoomService],
 })
 export class AppModule {}

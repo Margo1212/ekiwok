@@ -5,3 +5,4 @@ export * from "./Auth";
 export * from "./Payload";
 export * from "./Game";
 export * from "./Player";
+export * from "./Question";
