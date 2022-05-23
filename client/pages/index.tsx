@@ -2,7 +2,6 @@ import { Emoji } from 'components/Emoji/emoji';
 import { CreateGame } from 'modules/auth/components/CreateGame';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
 
 import { Avatar } from '../components/Avatar/Avatar';
 import { Badge } from '../components/Badge/Badge';

@@ -26,5 +26,6 @@ module.exports = {
       'Baloo 2': ['Baloo 2', 'cursive'],
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'),  require('tailwind-scrollbar')],
+ 
 };
