@@ -5,7 +5,7 @@ type InputProps = {
   iconPosition?: 'left' | 'right';
   sizeOfInput?: 'md' | 'sm';
   onChange?: (value: string) => void;
-} & InputHTMLAttributes<HTMLInputElement>;
+} & Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>;
 
 export const Input = ({ placeholder, icon, iconPosition, sizeOfInput, onChange, ...props }: InputProps) => {
   const [value, setValue] = useState('');

@@ -1,8 +1,5 @@
-import { Emoji } from 'components/Emoji/emoji';
-import { CreateGame } from 'modules/auth/components/CreateGame';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
 
 import StartView from '../components/StartView/StartView';
 import styles from '../styles/Home.module.css';
