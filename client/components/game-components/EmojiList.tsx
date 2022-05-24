@@ -15,9 +15,9 @@ const EmojiList = ({ stretch }: EmojiListProps) => {
 
   useEffect(() => {
     if (disabled) {
-      setTimeout(() => setDisabled(false), 3000)
+      setTimeout(() => setDisabled(false), 3000);
     }
-  }, [disabled])
+  }, [disabled]);
 
   return (
     <div className={`${isStretched} mobile:hidden h-100 `}>
