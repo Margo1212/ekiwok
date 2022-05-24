@@ -1,7 +1,7 @@
 import { createContext, FC, ReactNode, useContext } from 'react';
 import { useSocket as useSocketIo } from 'socket.io-react-hook';
 
-const backendURL = 'http://localhost:5001';
+const backendURL = process.env.NEXT_PUBLIC_SERVER_URL || 'https://ekiwok.herokuapp.com/';
 
 export type SocketConxtextValue = {
   socket: ReturnType<typeof useSocketIo>['socket'];
