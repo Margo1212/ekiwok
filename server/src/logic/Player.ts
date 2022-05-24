@@ -4,10 +4,12 @@ import { gameConfig } from 'src/config/game.config';
 export class Player {
   private readonly user: User;
   private score: number;
+  private avatar: number;
 
-  constructor(user: User) {
+  constructor(user: User, avatar: number) {
     this.user = user;
     this.score = 0;
+    this.avatar = avatar;
   }
 
   public get socketId(): string {
@@ -26,6 +28,6 @@ export class Player {
   }
 
   serialize(): PlayerSerialized {
-    return { id: this.user.id, name: this.user.name, score: this.score, socketId: this.user.socketId };
+    return { id: this.user.id, name: this.user.name, score: this.score, socketId: this.user.socketId, avatar: this.avatar };
   }
 }

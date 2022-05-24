@@ -37,7 +37,7 @@ export const MessagesField = ({ chat }: MessagesFieldProps) => {
               } items-center justify-start`}
               key={i}
             >
-              <Avatar size="sm" username={m.author.name} avatarNo={1} />
+              <Avatar size="sm" username={m.author.name} avatarNo={m.author.avatar} />
               <Emoji icon={m.content} size={'md'} />
             </div>
           ))}
