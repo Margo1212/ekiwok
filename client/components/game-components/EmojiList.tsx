@@ -1,5 +1,5 @@
 import { allowedEmojis } from 'modules/gameplay/assets/allowedEmojis';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Card } from '../Card/Card';
 import { Text } from '../Text/text';
