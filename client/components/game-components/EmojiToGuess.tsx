@@ -16,12 +16,12 @@ const EmojiToGuess = ({ question }: EmojiToGuessProps) => {
       <Card paddingX="md">
         <Text>Do zgadnięcia:</Text>
         <div>
-          <Emoji icon={question.anwser} />
+          <Emoji icon={question.anwser} size="lg" />
         </div>
         <Text>Nie możesz użyć:</Text>
         <div>
           {question.forbidden.map((icon) => (
-            <Emoji key={icon} icon={icon} />
+            <Emoji key={icon} icon={icon} size="lg" />
           ))}
         </div>
       </Card>
