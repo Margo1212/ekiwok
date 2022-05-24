@@ -32,8 +32,8 @@ export const MessagesField = ({ chat }: MessagesFieldProps) => {
           {messages.map((m, i) => (
             <div
               ref={messagesEndRef}
-              className={`w-80 m-5 border  rounded-2xl flex ${
-                m.isHint ? 'flex-row-reverse border-border' : 'flex-row border-primary'
+              className={`w-60 m-5 border rounded-2xl flex ${
+                m.isHint ? 'flex-row border-border float-left' : 'flex-row-reverse border-primary float-right'
               } items-center`}
               key={i}
             >
