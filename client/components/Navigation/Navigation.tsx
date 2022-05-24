@@ -1,4 +1,5 @@
 import { Share1Icon } from '@radix-ui/react-icons';
+import { Timer } from 'components/Timer/timer';
 import { Tooltip } from 'components/Tooltip/Tooltip';
 import { useCopyToClipboard } from 'react-use';
 
@@ -12,6 +13,9 @@ export const Navigation = () => {
     <nav className="bg-dark flex justify-between items-center px-16 mobile:p-5 border-b-4 border-primary">
       <div>
         <Logo width="270" height="76" />
+      </div>
+      <div>
+        <Timer seconds={15} />
       </div>
       <div className="flex space-x-4">
         <div className="mobile:hidden">
