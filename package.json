@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "cd server && npm install --dev",
+    "heroku-postbuild": "cd server && npm run build",
+    "start": "cd server && npm start"
   },
   "repository": {
     "type": "git",
@@ -15,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/402-coders/ekiwok/issues"
   },
-  "homepage": "https://github.com/402-coders/ekiwok#readme",
-  "devDependencies": {
-    "nx": "14.1.5"
-  }
+  "homepage": "https://github.com/402-coders/ekiwok#readme"
 }
