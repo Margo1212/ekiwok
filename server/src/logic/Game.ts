@@ -58,7 +58,7 @@ export class Game {
   }
 
   private addNewHint(emoji: string): void {
-    if (this.question.isForbidden(emoji)) return;
+    if (this.question.isForbidden(emoji) || this.question.isCorrect(emoji)) return;
     const message = this.chat.sendMessage(emoji, this.currentPlayer.serialize(), true);
     this.emitEvent('new-message', message);
   }
