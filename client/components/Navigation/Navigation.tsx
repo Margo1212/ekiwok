@@ -15,7 +15,7 @@ export const Navigation = () => {
         <Logo width="270" height="76" />
       </div>
       <div>
-        <Timer seconds={15} />
+        <Timer seconds={1800} />
       </div>
       <div className="flex space-x-4">
         <div className="mobile:hidden">
