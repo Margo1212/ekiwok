@@ -28,7 +28,7 @@ export const MessagesField = ({ chat }: MessagesFieldProps) => {
   return (
     <div className="row-span-2 mobile:basis-1/2 mobile:order-last mobile:grow">
       <Card paddingX="sm">
-        <div className=" overflow-y-scroll h-full w-full scrollbar scrollbar-track-background scrollbar-thumb-border">
+        <div className="overflow-y-scroll h-full w-full scrollbar scrollbar-track-background scrollbar-thumb-border">
           {messages.map((m, i) => (
             <div
               ref={messagesEndRef}
