@@ -32,13 +32,13 @@ export const MessagesField = ({ chat }: MessagesFieldProps) => {
           {messages.map((m, i) => (
             <div
               ref={messagesEndRef}
-              className={`w-80 m-5 border border-border rounded-md flex ${
-                m.isHint ? 'flex-row' : 'flex-row-reverse'
-              } items-center justify-start`}
+              className={`w-80 m-5 border  rounded-2xl flex ${
+                m.isHint ? 'flex-row-reverse border-border' : 'flex-row border-primary'
+              } items-center`}
               key={i}
             >
               <Avatar size="sm" username={m.author.name} avatarNo={1} />
-              <Emoji icon={m.content} size={'md'} />
+              <Emoji icon={m.content} size={'lg'} />
             </div>
           ))}
         </div>
