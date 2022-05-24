@@ -18,10 +18,13 @@ type BadgeProps = {
 
 const Badge = ({ count = 0, size = 'lg', variant = 'outlined' }: BadgeProps) => {
   return (
-    <div>
+    <div
+      className="
+      flex
+      justify-center"
+    >
       <div
         className={`
-          m-2
           flex
           justify-center
           items-center

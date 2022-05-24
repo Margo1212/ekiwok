@@ -10,7 +10,7 @@ import avatar6 from './img/Avatar-6.svg';
 
 type AvatarProps = {
   username: string;
-  avatarNo: 1 | 2 | 3 | 4 | 5 | 6;
+  avatarNo: number;
   size?: keyof typeof sizes;
 };
 
