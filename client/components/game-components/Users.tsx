@@ -7,9 +7,10 @@ import { Player } from './Player';
 
 export type UsersProps = {
   users: PlayerSerialized[];
+  currentPlayer?: PlayerSerialized;
 };
 
-const Users = ({ users }: UsersProps) => {
+const Users = ({ users, currentPlayer }: UsersProps) => {
   const payload = useUserJoined();
   const pointScoredPayload = usePointScored();
   let players = payload?.users?.length && payload.users.length > 0 ? payload.users : users;
@@ -19,7 +20,7 @@ const Users = ({ users }: UsersProps) => {
   return (
     <div className="col-span-2 mobile:basis-1/6 h-full flex justify-between mobile:flex-col">
       {players.map(({ id, name, score, avatar }) => (
-        <Player key={id} avatarId={avatar} id={id} name={name} score={score} />
+        <Player key={id} avatarId={avatar} id={id} name={name} score={score} currentPlayer={currentPlayer} />
       ))}
     </div>
   );

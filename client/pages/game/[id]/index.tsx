@@ -16,7 +16,7 @@ const GamePage: NextPage = () => {
       <div className="h-88v grid grid-cols-3 grid-rows-2 gap-x-20 gap-y-12 px-12 py-8 mobile:flex mobile:flex-wrap mobile:h-full">
         <EmojiPanel currentQuestion={game.question} />
         <MessagesField chat={game.chat} />
-        <Users users={game.players} />
+        <Users users={game.players} currentPlayer={game.currentPlayer} />
       </div>
     </div>
   );
