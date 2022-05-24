@@ -11,7 +11,7 @@ export type PlayerProps = {
 export const Player = ({ name, avatarId, score }: PlayerProps) => {
   return (
     <div className="flex flex-col">
-      <Avatar username={name} avatarNo={avatarId + 1} />
+      <Avatar username={name} avatarNo={avatarId} />
       <Badge count={score} variant="outlined" />
     </div>
   );

@@ -1,11 +1,11 @@
 import { Message } from '@shared';
+import { Avatar } from 'components/Avatar/Avatar';
+import { Emoji } from 'components/Emoji/emoji';
 import { useNewMessage } from 'modules/gameplay/hooks/useNewMessage';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useList } from 'react-use';
 
 import { Card } from '../Card/Card';
-import { Icon } from '../Icon/Icon';
-import { Input } from '../Input/Input';
 
 export type MessagesFieldProps = {
   chat: Message[];
@@ -19,14 +19,28 @@ export const MessagesField = ({ chat }: MessagesFieldProps) => {
     if (newMessage) push(newMessage);
   }, [newMessage?.id]);
 
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    messagesEndRef?.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
   return (
     <div className="row-span-2 mobile:basis-1/2 mobile:order-last mobile:grow">
       <Card paddingX="sm">
-        {messages.map((m, i) => (
-          <span key={i}>{m.content}</span>
-        ))}
-        <div className="w-full h-full flex items-end">
-          <Input sizeOfInput="sm" iconPosition="right" icon={<Icon type={'emotikon'} size={'sm'} />} />
+        <div className=" overflow-y-scroll h-full w-full scrollbar scrollbar-track-background scrollbar-thumb-border">
+          {messages.map((m, i) => (
+            <div
+              ref={messagesEndRef}
+              className={`w-60 m-5 border rounded-2xl flex ${
+                m.isHint ? 'flex-row border-border float-left' : 'flex-row-reverse border-primary float-right'
+              } items-center`}
+              key={i}
+            >
+              <Avatar size="sm" username={m.author.name} avatarNo={m.author.avatar} />
+              <Emoji icon={m.content} size={'md'} />
+            </div>
+          ))}
         </div>
       </Card>
     </div>

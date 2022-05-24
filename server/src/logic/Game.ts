@@ -29,7 +29,7 @@ export class Game {
     const numberOfPlayers = this.players.length + 1;
     if (numberOfPlayers >= gameConfig.maxPlayers) throw new Error('Pokój jest pełny');
     if (numberOfPlayers >= gameConfig.playersRequiredToStartTheGame) this.startTheGame();
-    const player = new Player(user);
+    const player = new Player(user, numberOfPlayers);
     this.players.push(player);
   }
 

@@ -1,10 +1,10 @@
 import { Share1Icon } from '@radix-ui/react-icons';
+import { Timer } from 'components/Timer/timer';
 import { Tooltip } from 'components/Tooltip/Tooltip';
 import { useCopyToClipboard } from 'react-use';
 
 import { Button } from '../Button/Button';
 import { Logo } from '../Logo/logo';
-import { Timer } from '../Timer/timer';
 
 export const Navigation = () => {
   const [, copyToClipboard] = useCopyToClipboard();

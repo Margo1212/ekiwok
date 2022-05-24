@@ -18,8 +18,8 @@ const Users = ({ users }: UsersProps) => {
 
   return (
     <div className="col-span-2 mobile:basis-1/6 h-full flex justify-between mobile:flex-col">
-      {players.map(({ id, name, score }, index) => (
-        <Player key={id} avatarId={index} id={id} name={name} score={score} />
+      {players.map(({ id, name, score, avatar }) => (
+        <Player key={id} avatarId={avatar} id={id} name={name} score={score} />
       ))}
     </div>
   );
